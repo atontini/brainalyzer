@@ -1,0 +1,36 @@
+# Ignore Cargo files
+/target/
+/**/target/
+
+# Ignore compiled output
+*.rs.bk
+*.rlib
+*.dSYM
+*.exe
+*.pdb
+*.dll
+*.so
+*.dylib
+
+# Ignore package manager files
+Cargo.lock
+
+# Ignore IDE/editor-specific files
+**/*.swp
+.idea/
+.vscode/
+*.iml
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.out
+
+# Ignore MacOS-specific files
+.DS_Store
+
+# Ignore Windows-specific files
+Thumbs.db
+desktop.ini
