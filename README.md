@@ -1,38 +1,77 @@
-# Rust New Project Template
+# Brainalyzer
 
-This is a custom project template for cargo projects, complete with a predefined `.gitignore`, GitHub Action for continuous integration, and other configurations.
+**Brainalyzer** is a powerful, minimalist parser and interpreter for the Brainfuck programming language. Designed for performance and ease of understanding, Brainalyzer offers users and developers a streamlined interface for executing, debugging, and analyzing Brainfuck code.
+
+## Features
+
+- **Efficient Parsing:** Fast and robust parsing of Brainfuck code with optimized memory handling.
+- **Error Reporting:** Helpful error messages that pinpoint syntax and logic issues in Brainfuck programs.
+- **Step-by-Step Execution:** A feature to execute code step-by-step, ideal for debugging and learning.
+- **Customizable Memory Tape:** Configure memory cell size and length to simulate different environments.
+- **Flexible Output:** Display program output in the console, or redirect it to files or other processes.
+
+## Installation
+
+To install Brainalyzer, clone the repository and compile the source code:
+
+```bash
+git clone https://github.com/atontini/brainalyzer.git
+cd brainalyzer
+cargo build --release
+```
 
 ## Usage
 
-To create a new project using this template, you can use [`cargo-generate`](https://github.com/cargo-generate/cargo-generate).
+Brainalyzer can be used both interactively and with pre-written Brainfuck files.
 
-## Steps
+### Running Brainfuck Code
 
-1. **Install `cargo-generate`** if you haven’t already:
+To run a Brainfuck file:
+
 ```bash
-cargo install cargo-generate
+brainalyzer run path/to/yourfile.bf
 ```
-2. Generate a New Project from this template by running:
+
+<!-- 
+To execute code interactively:
+
 ```bash
-cargo generate --git https://github.com/atontini/rust_new_project_template --name project-name
+brainalyzer repl
 ```
-* Replace project-name with the desired name for your new project.
+-->
 
-After running this command, cargo-generate will create a new project with the custom `.gitignore`, GitHub Action for CI, and other predefined files included.
+In interactive mode, enter your Brainfuck code line-by-line, and Brainalyzer will interpret it in real-time.
 
-Example Directory Structure
-Once generated, your project structure will look like this:
+<!--
+## Options
 
+- `--memory <SIZE>`: Set custom memory tape size.
+- `--output <FILE>`: Redirect output to a specified file.
+- `--debug`: Enable debug mode for more detailed execution logs.
+-->
+
+## Examples
+
+Execute a Brainfuck program stored in `examples/hello.bf`:
+
+```bash
+brainalyzer run examples/hello.bf
 ```
-├── .gitignore
-├── Cargo.toml
-└── src
-    └── main.rs
+
+<!--
+Use custom memory size and debug mode:
+
+```bash
+brainalyzer run hello.bf --memory 30000 --debug
 ```
+-->
 
-### GitHub Actions
+## Contributing
 
-This template includes a GitHub Action (`rust.yml`) that automatically compiles the `main` branch after each push, ensuring that your project remains in a buildable state.
+Contributions are welcome! Please submit a pull request with a clear description of your changes, and ensure that all tests pass before submitting.
 
+<!-- 
+## License
 
-Contributions are welcome! Please fork the repository, create a new branch, make your changes, and submit a pull request.
+This project is licensed under the MIT License. See `LICENSE` for more details.
+-->
