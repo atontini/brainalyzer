@@ -32,23 +32,7 @@ To run a Brainfuck file:
 brainalyzer run path/to/yourfile.bf
 ```
 
-<!-- 
-To execute code interactively:
-
-```bash
-brainalyzer repl
-```
--->
-
 In interactive mode, enter your Brainfuck code line-by-line, and Brainalyzer will interpret it in real-time.
-
-<!--
-## Options
-
-- `--memory <SIZE>`: Set custom memory tape size.
-- `--output <FILE>`: Redirect output to a specified file.
-- `--debug`: Enable debug mode for more detailed execution logs.
--->
 
 ## Examples
 
@@ -58,20 +42,6 @@ Execute a Brainfuck program stored in `examples/hello.bf`:
 brainalyzer run examples/hello.bf
 ```
 
-<!--
-Use custom memory size and debug mode:
-
-```bash
-brainalyzer run hello.bf --memory 30000 --debug
-```
--->
-
 ## Contributing
 
 Contributions are welcome! Please submit a pull request with a clear description of your changes, and ensure that all tests pass before submitting.
-
-<!-- 
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for more details.
--->
