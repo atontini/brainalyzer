@@ -1,10 +1,10 @@
+use std::io::Read;
 use std::fs::File;
-use std::io::{self, Read};
 use std::path::Path;
 
-pub fn read_file_to_string<P: AsRef<Path>>(path: P) -> io::Result<String> {
-    let mut file = File::open(path)?;
+pub fn read_file_to_string(path: &Path) -> String {
+    let mut file = File::open(path).expect("Failed to open file");
     let mut contents = String::new();
-    file.read_to_string(&mut contents)?;
-    Ok(contents)
+    file.read_to_string(&mut contents).expect("Failed to read file");
+    contents
 }
