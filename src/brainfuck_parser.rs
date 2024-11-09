@@ -1,5 +1,7 @@
 use std::io::{self, Read};
 
+use crate::config::is_debug;
+
 pub struct BrainfuckParser {
     memory: Vec<u8>,
     pointer: usize,
@@ -18,6 +20,10 @@ impl BrainfuckParser {
         let mut pc = 0;
 
         while pc < code_chars.len() {
+            if is_debug() {
+                println!("pc = {:?}", pc);
+            }
+            
             match code_chars[pc] {
                 '>' => self.pointer += 1,
                 '<' => self.pointer -= 1,
