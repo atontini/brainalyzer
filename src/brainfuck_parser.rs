@@ -21,7 +21,7 @@ impl BrainfuckParser {
 
         while pc < code_chars.len() {
             if is_debug() {
-                println!("pc = {:?}", pc);
+                self.debug(pc, code_chars[pc]);
             }
             
             match code_chars[pc] {
@@ -65,5 +65,11 @@ impl BrainfuckParser {
             }
             pc += 1;
         }
+    }
+
+    fn debug(&self, pc: usize, instruction: char) {
+        println!(
+            "[DEBUG] PC: {pc}, Instruction: '{instruction}', Pointer: {}, Memory[Pointer]: {}", self.pointer, self.memory[self.pointer]
+        );
     }
 }
