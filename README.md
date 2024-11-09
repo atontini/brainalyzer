@@ -39,7 +39,7 @@ In interactive mode, enter your Brainfuck code line-by-line, and Brainalyzer wil
 Execute a Brainfuck program stored in `examples/hello.bf`:
 
 ```bash
-brainalyzer run examples/hello.bf
+brainalyzer.exe parse --filepath examples/hello.bf
 ```
 
 ## Contributing
